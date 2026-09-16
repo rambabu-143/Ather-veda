@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-stone: #241a10;
+  --color-stone-2: #2f2317;
+  --color-stone-3: #392b1b;
+  --color-ink: #f3e7ce;
+  --color-muted: #b7a788;
+
+  --color-paper: #fbf4e4;
+  --color-paper-2: #f2e6cb;
+  --color-ink-on-paper: #2e2013;
+  --color-muted-on-paper: #7c6b4e;
+
+  --color-parchment: #ede0c2;
+  --color-parchment-ink: #2e2013;
+
+  --color-ember: #e0902f;
+  --color-ember-soft: #8a5a24;
+  --color-clay: #b0512e;
+  --color-tulsi: #6f7d48;
+  --color-brass: #c79a42;
+
+  --color-line: #4a3a26;
+  --color-line-soft: #e3d5b3;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-stone: var(--color-stone);
+  --color-stone-2: var(--color-stone-2);
+  --color-stone-3: var(--color-stone-3);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --color-paper: var(--color-paper);
+  --color-paper-2: var(--color-paper-2);
+  --color-ink-on-paper: var(--color-ink-on-paper);
+  --color-muted-on-paper: var(--color-muted-on-paper);
+  --color-parchment: var(--color-parchment);
+  --color-parchment-ink: var(--color-parchment-ink);
+  --color-ember: var(--color-ember);
+  --color-ember-soft: var(--color-ember-soft);
+  --color-clay: var(--color-clay);
+  --color-tulsi: var(--color-tulsi);
+  --color-brass: var(--color-brass);
+  --color-line: var(--color-line);
+  --color-line-soft: var(--color-line-soft);
+
+  --font-display: var(--font-eczar);
+  --font-sans: var(--font-hind);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes flicker {
+  0%, 100% { transform: scaleY(1) rotate(0deg); }
+  30% { transform: scaleY(1.05) rotate(-1deg); }
+  55% { transform: scaleY(0.96) rotate(1deg); }
+  80% { transform: scaleY(1.03) rotate(-0.5deg); }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink-on-paper);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), Georgia, serif;
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
