@@ -1,63 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  --color-stone: #241a10;
-  --color-stone-2: #2f2317;
-  --color-stone-3: #392b1b;
-  --color-ink: #f3e7ce;
-  --color-muted: #b7a788;
+  /* dark surfaces (header on scroll, footer, hero bands) */
+  --color-stone: #09090b;
+  --color-stone-2: #18181b;
+  --color-ink: #fafafa;
+  --color-muted: #a1a1aa;
 
-  --color-paper: #fbf4e4;
-  --color-paper-2: #f2e6cb;
-  --color-ink-on-paper: #2e2013;
-  --color-muted-on-paper: #7c6b4e;
+  /* light surfaces (page body, cards) */
+  --color-paper: #ffffff;
+  --color-paper-2: #f4f4f5;
+  --color-ink-on-paper: #18181b;
+  --color-muted-on-paper: #52525b;
 
-  --color-parchment: #ede0c2;
-  --color-parchment-ink: #2e2013;
+  /* brand accent - warm saffron/amber, single strong accent */
+  --color-ember: #a05708;
+  --color-ember-soft: #834707;
+  --color-brass: #c2690a;
+  --color-tulsi: #4d7c0f;
 
-  --color-ember: #e0902f;
-  --color-ember-soft: #8a5a24;
-  --color-clay: #b0512e;
-  --color-tulsi: #6f7d48;
-  --color-brass: #c79a42;
-
-  --color-line: #4a3a26;
-  --color-line-soft: #e3d5b3;
+  --color-line: #27272a;
+  --color-line-soft: #e4e4e7;
 }
 
 @theme inline {
   --color-stone: var(--color-stone);
   --color-stone-2: var(--color-stone-2);
-  --color-stone-3: var(--color-stone-3);
   --color-ink: var(--color-ink);
   --color-muted: var(--color-muted);
   --color-paper: var(--color-paper);
   --color-paper-2: var(--color-paper-2);
   --color-ink-on-paper: var(--color-ink-on-paper);
   --color-muted-on-paper: var(--color-muted-on-paper);
-  --color-parchment: var(--color-parchment);
-  --color-parchment-ink: var(--color-parchment-ink);
   --color-ember: var(--color-ember);
   --color-ember-soft: var(--color-ember-soft);
-  --color-clay: var(--color-clay);
-  --color-tulsi: var(--color-tulsi);
   --color-brass: var(--color-brass);
+  --color-tulsi: var(--color-tulsi);
   --color-line: var(--color-line);
   --color-line-soft: var(--color-line-soft);
 
-  --font-display: var(--font-eczar);
+  --font-display: var(--font-hind);
   --font-sans: var(--font-hind);
+  --font-signature: var(--font-dancing);
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-@keyframes flicker {
-  0%, 100% { transform: scaleY(1) rotate(0deg); }
-  30% { transform: scaleY(1.05) rotate(-1deg); }
-  55% { transform: scaleY(0.96) rotate(1deg); }
-  80% { transform: scaleY(1.03) rotate(-0.5deg); }
 }
 
 body {
@@ -67,7 +55,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-display), Georgia, serif;
+  font-family: var(--font-display), system-ui, sans-serif;
   text-wrap: balance;
 }
 

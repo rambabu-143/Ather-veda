@@ -20,20 +20,19 @@ export function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden bg-stone text-ink">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(224,144,47,0.16),transparent_60%)]" />
+    <section className="relative overflow-hidden border-b border-line-soft bg-paper-2 text-ink-on-paper">
       <div className="relative mx-auto max-w-4xl px-5 py-20 text-center">
         {breadcrumb && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: EASE }}
-            className="mb-5 flex flex-wrap items-center justify-center gap-1.5 text-xs text-muted"
+            className="mb-5 flex flex-wrap items-center justify-center gap-1.5 text-xs text-muted-on-paper"
           >
             {breadcrumb.map((b, i) => (
               <span key={b.href} className="flex items-center gap-1.5">
                 {i > 0 && <span>/</span>}
-                <Link href={b.href} className="hover:text-ink">
+                <Link href={b.href} className="hover:text-ink-on-paper">
                   {b.label}
                 </Link>
               </span>
@@ -61,7 +60,7 @@ export function PageHero({
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.18, ease: EASE }}
-            className="mx-auto mt-5 max-w-2xl text-base text-muted sm:text-lg"
+            className="mx-auto mt-5 max-w-2xl text-base text-muted-on-paper sm:text-lg"
           >
             {lede}
           </motion.p>

@@ -27,7 +27,7 @@ export function DonatePanel({ initialProgram }: { initialProgram?: string }) {
             }}
             className={`rounded-md border px-4 py-3 text-sm font-semibold transition-all duration-200 ${
               !custom && amount === a
-                ? "border-ember bg-ember text-stone"
+                ? "border-ember bg-ember text-ink"
                 : "border-line-soft text-ink-on-paper hover:border-ember/60"
             }`}
           >
@@ -53,7 +53,7 @@ export function DonatePanel({ initialProgram }: { initialProgram?: string }) {
             type="button"
             onClick={() => setFrequency(f)}
             className={`relative flex-1 rounded px-4 py-2 text-sm font-medium capitalize transition-colors duration-200 ${
-              frequency === f ? "text-stone" : "text-muted-on-paper"
+              frequency === f ? "text-ink" : "text-muted-on-paper"
             }`}
           >
             {frequency === f && (
@@ -87,7 +87,7 @@ export function DonatePanel({ initialProgram }: { initialProgram?: string }) {
 
       <button
         type="button"
-        className="mt-6 w-full rounded-md bg-ember py-3.5 text-sm font-bold text-stone transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-ember/30"
+        className="mt-6 w-full rounded-md bg-ember py-3.5 text-sm font-bold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:bg-ember-soft hover:shadow-lg hover:shadow-ember/30"
       >
         Proceed to pay ₹{effectiveAmount.toLocaleString("en-IN")} →
       </button>

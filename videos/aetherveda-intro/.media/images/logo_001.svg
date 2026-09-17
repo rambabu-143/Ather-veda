@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 80" fill="none" aria-hidden="true">
+  <path
+    d="M10,74 L10,38 Q10,8 35,8 Q60,8 60,38 L60,74"
+    stroke="#18181B"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+  <line x1="4" y1="74" x2="66" y2="74" stroke="#18181B" stroke-width="5" stroke-linecap="round" />
+  <path
+    d="M35,20 C29,30 26,37 31,44 C33,47 37,47 39,44 C44,37 41,30 35,20 Z"
+    fill="url(#markFlame)"
+  />
+  <defs>
+    <linearGradient id="markFlame" x1="35" y1="20" x2="35" y2="47" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F1A14B" />
+      <stop offset="1" stop-color="#A05708" />
+    </linearGradient>
+  </defs>
+</svg>

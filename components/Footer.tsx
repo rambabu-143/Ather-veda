@@ -39,7 +39,7 @@ export function Footer() {
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2.5 text-ink">
               <Mark className="h-7 w-6 text-brass" />
-              <span className="font-display text-lg font-semibold">AetherVeda</span>
+              <span className="font-signature text-2xl font-bold leading-none">AetherVeda</span>
             </div>
             <p className="max-w-xs text-sm leading-relaxed">
               Nourishing Lives. Preserving Legacies. Established in eternal memory of Late Sh. Bankey

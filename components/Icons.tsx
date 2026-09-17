@@ -1,27 +1,16 @@
 import type { ReactElement } from "react";
 import type { IconName } from "@/lib/content";
 
-export function Mark({ className = "", flicker = false }: { className?: string; flicker?: boolean }) {
+export function Mark({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 70 80" className={className} fill="none" aria-hidden="true">
+    <svg viewBox="0 0 48 48" className={className} fill="none" aria-hidden="true">
       <path
-        d="M10,74 L10,38 Q10,8 35,8 Q60,8 60,38 L60,74"
+        d="M24,8 A16,16 0 0 1 24,40 A16,16 0 0 1 24,8"
         stroke="currentColor"
-        strokeWidth="5"
+        strokeWidth="3"
         strokeLinecap="round"
       />
-      <line x1="4" y1="74" x2="66" y2="74" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
-      <path
-        className={flicker ? "origin-[35px_40px] motion-safe:animate-[flicker_3.4s_ease-in-out_infinite]" : ""}
-        d="M35,20 C29,30 26,37 31,44 C33,47 37,47 39,44 C44,37 41,30 35,20 Z"
-        fill="url(#markFlame)"
-      />
-      <defs>
-        <linearGradient id="markFlame" x1="35" y1="20" x2="35" y2="47" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor="#F7C97A" />
-          <stop offset="1" stopColor="#E0902F" />
-        </linearGradient>
-      </defs>
+      <path d="M24,14 Q32,24 24,32 Q16,24 24,14 Z" fill="#A05708" />
     </svg>
   );
 }

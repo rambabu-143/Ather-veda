@@ -24,7 +24,7 @@ export function Gallery() {
             type="button"
             onClick={() => setFilter(c)}
             className={`relative rounded-full px-4 py-2 text-xs font-semibold transition-colors duration-200 ${
-              filter === c ? "text-stone" : "text-muted-on-paper hover:text-ink-on-paper"
+              filter === c ? "text-ink" : "text-muted-on-paper hover:text-ink-on-paper"
             }`}
           >
             {filter === c && (

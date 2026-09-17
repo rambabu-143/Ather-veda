@@ -43,7 +43,7 @@ export function StubForm({
           {children}
           <button
             type="submit"
-            className="mt-1 self-start rounded-md bg-ember px-6 py-3 text-sm font-semibold text-stone transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-ember/30"
+            className="mt-1 self-start rounded-md bg-ember px-6 py-3 text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:bg-ember-soft hover:shadow-lg hover:shadow-ember/30"
           >
             {submitLabel}
           </button>
