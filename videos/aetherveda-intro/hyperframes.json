@@ -10,11 +10,5 @@
     "autoProxy": true
   },
   "authoringSkill": "motion-graphics",
-  "registryItems": [
-    {
-      "name": "logo-outro",
-      "type": "hyperframes:block",
-      "target": "compositions/logo-outro.html"
-    }
-  ]
+  "registryItems": []
 }

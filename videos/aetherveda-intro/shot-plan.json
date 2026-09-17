@@ -1,55 +1,44 @@
 {
   "category": "logo-reveal",
-  "duration_s": 5,
+  "duration_s": 3.3,
   "fps": 30,
   "canvas": { "w": 1920, "h": 1080, "aspect": "16:9" },
-  "style": "clean, modern, minimal nonprofit brand — calm confident motion, no ornate flicker or heavy texture; generous whitespace, single accent color doing the work",
-  "palette": ["#FFFFFF", "#18181B", "#A05708", "#834707", "#C2690A", "#E4E4E7"],
-  "font": "Hind",
-  "beats": [1.15, 2.65, 3.75],
+  "style": "clean, minimal, no text at all — just the finished logo mark stamping in and drawing itself, then a single glow pulse and a hold",
+  "palette": ["#FFFFFF", "#18181B", "#A05708"],
+  "font": "none — this version of the sting has no wordmark, tagline, or underline; it is the logo mark alone",
+  "beats": [1.75, 2.3],
   "export": "mp4",
 
   "asset_needs": [
     {
       "role": "hero",
       "kind": "logo",
-      "source": ".media/images/logo_003.svg",
-      "treatment": "none"
+      "source": ".media/images/logo_006.svg",
+      "treatment": "recolored to site palette (ink bg, white A, amber V) — see customize.recolor"
     }
   ],
 
-  "block": "logo-outro",
+  "block": null,
   "customize": {
-    "catalog_check": "npx hyperframes catalog --query \"logo outro brand reveal with tagline and url\" --json confirmed logo-outro (block, 1920x1080) live: 'Cinematic logo reveal with piece-by-piece assembly, glow bloom, tagline fade-in, and URL pill' — matches the brief's own beats almost verbatim.",
-    "logo_redesign_v3": "Logo redesigned AGAIN — user rejected v2's arch/gateway silhouette outright ('change that logo man i dont like that logo design something else man'). New concept has NO architectural/temple imagery: a protective ring with a leaf/flame droplet of life growing inside it. Geometry (48x48 grid): ring is a single continuous path `M24,8 A16,16 0 0 1 24,40 A16,16 0 0 1 24,8` (two semicircular arcs forming a full circle — written this way, not as a `<circle>`, specifically so `getTotalLength()`/stroke-dashoffset draw-on works reliably), stroked #18181B, stroke-width 3, round caps, fill none. The leaf/droplet is unchanged in spirit from v2 (kept because it read well): `M24,14 Q32,24 24,32 Q16,24 24,14 Z`, flat solid fill #A05708. There is NO separate baseline path this time — it's one ring path + one leaf path, only two shapes total. Recompute the ring's stroke length live via getTotalLength(); do not reuse any old path-length assumptions from v1/v2.",
-    "mark_reveal_override": "The ring draws on in one continuous stroke-dashoffset animation (rules/svg-path-draw) — no staggered second piece needed since there's no separate baseline anymore. Stroke color #18181B, fill:none until drawn, single draw motion feels like a pen completing a full circle.",
-    "flame_ignition": "Leaf/droplet path (flat fill #A05708) is not stroke-drawable — ignite it with scale_grow (0.7→1) + opacity fade-in as the ring's draw-on nears completion (slight overlap, not a hard cut), then logo-outro's own glow-bloom primitive fires on the ring/leaf group (soft amber glow, single pulse, no repeat/flicker) as the pattern-interrupt beat.",
-    "wordmark_handwriting": "MAJOR CHANGE — user explicitly asked that 'AetherVeda' be WRITTEN, like someone is writing it in signature style, not just faded in as static text. Reuse the registry block `hw-path-text` (installed and inspected: /Users/ramrac/Downloads/Rams/aetherveda-foundation/videos/aetherveda-intro (that copy was removed after inspection, but re-add it with `npx hyperframes add hw-path-text` to see its reference implementation again if needed) — it does a genuine per-character reveal along an SVG <textPath>, using per-tspan opacity stagger, which is exactly a convincing 'pen writing' effect, NOT a plain fade. Adapt its technique (SVG <path> geometry + <text><textPath>...<tspan> per character + GSAP opacity stagger on the tspans) directly into our lockup: 'The ' and ' Foundation' stay as plain HTML text in Hind (fade-in, as before) flanking an inline SVG that draws 'AetherVeda' along a NEARLY-FLAT, gently-curved path (NOT the demo's big wavy signature curve — ours needs to sit inline within a single text line at the same baseline height as 'The'/'Foundation') in the SAME 'Dancing Script' font already used on the actual website for this exact word (do NOT use the block's default Caveat font — brand consistency with the site matters here), color var(--accent) #A05708, weight 700, sized to match the site's treatment (roughly 1.2x the surrounding wordmark's em-size, per the site's own `.font-signature { font-size: 1.2em }` convention in components/HomeHero.tsx). Disable or heavily mute the block's dotted 'guide' path (its default rgba guide line) — we don't want a stray dashed line competing with our own separate underline-sweep beat; if kept at all, opacity should be near-zero.",
-    "tagline_reveal": "logo-outro's native tagline fade-in, Hind, muted ink or #A05708 accent weight, starting shortly after the full wordmark line (including the handwritten word) has landed.",
-    "underline_sweep": "accent-graphic underline_sweep (fromTo scaleX 0→1, transform-origin left center, power2.out, ~0.4s) under the wordmark+tagline block in #A05708, landing at beat 3 (3.75s), then hold to duration_s.",
-    "url_pill": "omitted — dropped logo-outro's URL pill for the clean minimal nonprofit look the brief asks for (no chip/badge clutter); aetherveda.org is not rendered as an on-screen element.",
-    "background": "pure white (#FFFFFF) full-bleed, no dark backdrop, no vignette/texture/flicker from logo-outro's default cinematic treatment.",
-    "palette_map": { "ink": "#18181B", "accent": "#A05708", "accent-hover": "#834707", "accent-secondary": "#C2690A", "border": "#E4E4E7", "bg": "#FFFFFF" },
-    "font": "Hind for 'The'/'Foundation'/tagline; Dancing Script (700) specifically for the handwritten 'AetherVeda' — matches the site exactly, this is the one deliberate exception to 'sans-only'.",
+    "major_revision": "User supplied a finished, designer-made logo (/Users/ramrac/Downloads/Frame 1.svg) and asked to (1) use it as the one and only logo, replacing every prior in-house iteration, (2) recolor it to the site's exact palette, and (3) remove the wordmark/tagline/underline sequence entirely — the sting is now just this logo animating in, nothing else.",
+    "shape_structure": "4 paths: a rounded-square/circle badge background (single subpath), an abstract 'A' shape (single subpath, the left/main glyph), and a 'V' checkmark-like swoosh made of 2 subpaths (a small tip + a long curling tail). A near-duplicate second background path in the original file (with an inner 'hole' subpath) was confirmed empirically to have zero visible effect (same-direction winding under nonzero fill-rule) and was dropped.",
+    "recolor": "Background badge: designer's #020202 -> site ink #18181B. 'A': designer's #F8F8F8 -> white #FFFFFF. 'V' (both subpaths): designer's #F8F8F8 -> site accent #A05708. This follows the same 'one letter neutral, one letter accent' convention used by every prior monogram iteration on this project.",
+    "reveal_technique": "Same proven technique as the old wordmark: each mark shape has an outline (stroke, fill:none) twin and a fill (solid) twin. getTotalLength()/stroke-dashoffset draws the outline like a pen, then a short crossfade settles it into the real solid fill. The badge itself is NOT drawn this way — it's a simple 'stamp' scale+fade (back.out overshoot) since it's a plain rounded shape, not a letterform worth tracing.",
+    "background": "pure white (#FFFFFF) full-bleed — the dark badge is a floating chip/seal on white, not a dark full-screen backdrop.",
     "timing_beats_s": {
-      "duration_note": "Total duration extended from 4.0s to 5.0s to give the handwriting reveal room to read clearly — do not cram the typing into the old 0.5s wordmark window.",
       "lead_in": "0.00–0.15",
-      "ring_draw": "0.15–0.75 (power2.out, single continuous stroke)",
-      "leaf_ignite": "0.65–1.00 (scale_grow + fade, power2.out, slight overlap with ring's tail)",
-      "glow_bloom_peak": "1.00–1.45 (beat @1.15s, single pulse, no repeat)",
-      "the_fade": "1.55–1.80 (fade_in, power1.out — the word 'The')",
-      "aethervada_handwriting": "1.85–2.65 (per-character reveal along path, ~0.06–0.07s/char stagger for 10 characters, ease 'none' per the hw-path-text technique)",
-      "foundation_fade": "2.65–2.95 (fade_in, power1.out — the word 'Foundation', right after the handwriting finishes)",
-      "tagline_fade": "2.85–3.25 (beat @2.65s landing zone, fade_in, power1.out, slight overlap with 'Foundation')",
-      "underline_sweep": "3.35–3.75 (beat @3.75s, power2.out)",
-      "hold": "3.75–5.00 (hold_breath, still lockup)"
+      "badge_stamp": "0.15–0.50 (scale 0.7->1 + fade, back.out(1.6) overshoot — a seal 'stamping' down)",
+      "a_draw": "0.50–1.05 (outline stroke-dashoffset, ease none)",
+      "a_settle": "1.00–1.20 (outline -> solid white fill crossfade)",
+      "v_tip_draw": "1.10–1.30",
+      "v_swoosh_draw": "1.30–1.65",
+      "v_settle": "1.60–1.80 (outline -> solid amber fill crossfade)",
+      "glow_bloom": "1.75–2.30 (beat @1.75s grow, @1.95s fade start, single pulse, no repeat)",
+      "hold": "2.30–3.30 (hold_breath, sine.inOut, still mark)"
     }
   },
 
-  "content": {
-    "logo": ".media/images/logo_003.svg",
-    "tagline": "Nourishing Lives. Preserving Legacies."
-  },
+  "content": null,
 
-  "brief": "The AetherVeda Foundation mark (v3 redesign: a protective ring with a leaf/flame droplet of life inside it — no arch/gateway imagery, that was rejected) draws itself on as one continuous ring stroke, settles with a soft amber glow bloom as the leaf ignites, then 'The ' fades in, 'AetherVeda' is WRITTEN stroke-by-stroke in a handwritten signature style (Dancing Script, matching the site) as if someone is signing it live, ' Foundation' fades in, then the tagline. A thin amber underline sweep ties the lockup together before a brief hold. No flicker, no dark backdrop, no serif type outside the signature word, no URL pill, no gradient fill, no static/faded wordmark — the brand name has to visibly be written, not just appear."
+  "brief": "The finished AV badge logo (user-supplied, recolored to the site's ink/white/amber palette) stamps into frame like a wax seal, then its 'A' draws itself on stroke-by-stroke and settles into solid white, then the 'V' swoosh draws in amber and settles, a single soft amber glow pulses once, and the mark holds still. No wordmark, no tagline, no underline — the whole sting is the logo alone, per an explicit request to strip everything else out of the start animation."
 }

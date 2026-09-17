@@ -38,7 +38,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2.5 text-ink">
-              <Mark className="h-7 w-6 text-brass" />
+              <Mark className="h-7 w-10" />
               <span className="font-signature text-2xl font-bold leading-none">AetherVeda</span>
             </div>
             <p className="max-w-xs text-sm leading-relaxed">

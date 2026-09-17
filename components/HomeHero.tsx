@@ -25,7 +25,7 @@ export function HomeHero() {
         className="relative mx-auto flex max-w-3xl flex-col items-center gap-6 px-5 py-16 text-center"
       >
         <motion.div variants={item}>
-          <Mark className="h-14 w-12 text-ember" />
+          <Mark className="h-20 w-28" />
         </motion.div>
 
         <motion.h1 variants={item} className="text-4xl font-bold tracking-tight sm:text-6xl">

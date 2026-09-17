@@ -37,7 +37,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <Link href="/" className="flex items-center gap-2.5 text-ink-on-paper">
-          <Mark className="h-7 w-6 text-ember" />
+          <Mark className="h-7 w-10" />
           <span className="font-signature text-2xl font-bold leading-none">AetherVeda</span>
         </Link>
 
