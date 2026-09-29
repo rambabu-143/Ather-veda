@@ -8,13 +8,11 @@ export function IntroLoader() {
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    if (sessionStorage.getItem("intro-played")) return;
     // eslint-disable-next-line react-hooks/set-state-in-effect -- visibility depends on browser-only APIs unavailable during SSR
     setVisible(true);
   }, []);
 
   function dismiss() {
-    sessionStorage.setItem("intro-played", "1");
     setFading(true);
     window.setTimeout(() => setVisible(false), 300);
   }
