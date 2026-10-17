@@ -20,7 +20,7 @@ export function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden border-b border-line-soft bg-paper-2 text-ink-on-paper">
+    <section className="relative overflow-hidden mx-5 my-6 max-w-6xl rounded-3xl shadow-lg shadow-ember/10 ring-1 ring-ember/15 lg:mx-auto mt-24 bg-paper-2 text-ink-on-paper">
       <div className="relative mx-auto max-w-4xl px-5 py-20 text-center">
         {breadcrumb && (
           <motion.div
@@ -43,7 +43,7 @@ export function PageHero({
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.05, ease: EASE }}
-          className="mb-4 block text-xs font-semibold uppercase tracking-[0.2em] text-brass"
+          className="mb-4 block text-xs font-semibold uppercase tracking-[0.2em] gold-text"
         >
           {eyebrow}
         </motion.span>

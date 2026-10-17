@@ -8,7 +8,7 @@
     <style>
       :root {
         --ink: #18181b;
-        --accent: #a05708;
+        --accent: url(#av-gold);
         --bg: #ffffff;
       }
       * {
@@ -57,7 +57,7 @@
         width: 440px;
         height: 440px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(160, 87, 8, 0.35) 0%, rgba(160, 87, 8, 0) 70%);
+        background: radial-gradient(circle, rgba(240, 190, 60, 0.45) 0%, rgba(240, 190, 60, 0) 70%);
         opacity: 0;
         pointer-events: none;
       }
@@ -109,6 +109,15 @@
           <div class="mark-wrap">
             <div class="mark-glow"></div>
             <svg class="mark-svg" viewBox="42 37 112 78" width="500" height="348" aria-hidden="true">
+              <defs>
+                <linearGradient id="av-gold" gradientUnits="userSpaceOnUse" x1="42" y1="37" x2="154" y2="115">
+                  <stop offset="0" stop-color="#9a6b00" />
+                  <stop offset="0.3" stop-color="#f2cf63" />
+                  <stop offset="0.45" stop-color="#fff3b0" />
+                  <stop offset="0.6" stop-color="#d4a017" />
+                  <stop offset="1" stop-color="#8a5a00" />
+                </linearGradient>
+              </defs>
               <path
                 id="mark-a-outline"
                 class="mark-a-outline"

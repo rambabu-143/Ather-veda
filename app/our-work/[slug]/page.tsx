@@ -80,7 +80,7 @@ export default async function ProgramPage(props: PageProps<"/our-work/[slug]">) 
 
           <Reveal delay={0.15} className="md:sticky md:top-24 md:h-fit">
             <div className="flex flex-col gap-4 rounded-xl border border-ember/40 bg-paper-2 p-6">
-              <span className="text-xs font-semibold uppercase tracking-[0.14em] text-ember">
+              <span className="text-xs font-semibold uppercase tracking-[0.14em] gold-text">
                 Support this program
               </span>
               <div>
@@ -95,7 +95,7 @@ export default async function ProgramPage(props: PageProps<"/our-work/[slug]">) 
         </div>
       </section>
 
-      <section className="border-t border-line-soft bg-paper-2">
+      <section className="mx-5 my-6 max-w-6xl rounded-3xl shadow-lg shadow-ember/10 ring-1 ring-ember/15 lg:mx-auto bg-paper-2">
         <div className="mx-auto max-w-5xl px-5 py-16">
           <Reveal className="mb-8">
             <h2 className="font-display text-2xl font-bold text-ink-on-paper">The other three objects</h2>

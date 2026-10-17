@@ -53,7 +53,7 @@ export function DonatePanel({ initialProgram }: { initialProgram?: string }) {
             type="button"
             onClick={() => setFrequency(f)}
             className={`relative flex-1 rounded px-4 py-2 text-sm font-medium capitalize transition-colors duration-200 ${
-              frequency === f ? "text-ink" : "text-muted-on-paper"
+              frequency === f ? "text-[#2a1d00]" : "text-muted-on-paper"
             }`}
           >
             {frequency === f && (

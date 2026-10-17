@@ -5,9 +5,9 @@ const BASE =
   "inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold tracking-wide transition-all duration-300 ease-out will-change-transform hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2";
 
 const VARIANTS = {
-  primary: "bg-ember text-ink hover:bg-ember-soft hover:shadow-lg hover:shadow-ember/30 focus-visible:outline-ember",
+  primary: "bg-ember font-bold hover:bg-ember-soft hover:shadow-lg hover:shadow-ember/30 focus-visible:outline-ember",
   secondary:
-    "border border-brass text-brass hover:bg-brass/10 focus-visible:outline-brass",
+    "border border-brass gold-text hover:bg-brass/10 focus-visible:outline-brass",
   ghost: "text-ink hover:text-ember focus-visible:outline-ember",
 } as const;
 

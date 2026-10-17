@@ -23,7 +23,7 @@ export default function Home() {
 
       <section className="mx-auto max-w-5xl px-5 py-24">
         <Reveal className="mb-10 text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ember">
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] gold-text">
             Our Work
           </span>
           <h2 className="mt-2 text-3xl font-bold text-ink-on-paper sm:text-4xl">
@@ -39,13 +39,13 @@ export default function Home() {
         </RevealGroup>
       </section>
 
-      <section className="border-y border-line-soft bg-paper-2">
+      <section className="mx-5 my-6 max-w-6xl rounded-3xl shadow-lg shadow-ember/10 ring-1 ring-ember/15 lg:mx-auto bg-paper-2">
         <div className="mx-auto grid max-w-5xl gap-10 px-5 py-24 md:grid-cols-2 md:items-center">
           <Reveal>
             <div className="aspect-[4/3] rounded-xl bg-[repeating-linear-gradient(135deg,var(--color-line-soft)_0_1px,transparent_1px_10px)] border border-line-soft" />
           </Reveal>
           <Reveal delay={0.1}>
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ember">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] gold-text">
               Our Story
             </span>
             <h2 className="mt-2 text-3xl font-bold text-ink-on-paper">A gift, continued</h2>
@@ -65,7 +65,7 @@ export default function Home() {
 
       <section className="mx-auto max-w-5xl px-5 py-24">
         <Reveal className="text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ember">
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] gold-text">
             Get Involved
           </span>
           <h2 className="mt-2 text-3xl font-bold text-ink-on-paper sm:text-4xl">
@@ -106,25 +106,33 @@ export default function Home() {
         </RevealGroup>
       </section>
 
-      <section className="bg-stone">
-        <div className="mx-auto max-w-3xl px-5 py-20 text-center text-ink">
+      <section className="mx-5 my-6 max-w-6xl rounded-3xl shadow-lg shadow-ember/10 ring-1 ring-ember/15 lg:mx-auto bg-white">
+        <div className="mx-auto grid max-w-5xl items-center gap-10 px-6 py-16 text-ink-on-paper md:grid-cols-2 md:px-12">
           <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brass">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] gold-text">
               Stay Close
             </span>
             <h2 className="mt-2 text-2xl font-bold sm:text-3xl">
               One update a month, no more and no less
             </h2>
-            <div className="mx-auto mt-7 max-w-md text-left">
+            <ul className="mt-5 space-y-2 text-sm text-muted-on-paper">
+              <li className="flex gap-2"><span className="text-ember">✦</span> Stories from our gaushalas and field work</li>
+              <li className="flex gap-2"><span className="text-ember">✦</span> How your gifts were used</li>
+              <li className="flex gap-2"><span className="text-ember">✦</span> Volunteer drives and upcoming events</li>
+            </ul>
+          </Reveal>
+          <Reveal>
+            <div className="rounded-2xl bg-white/70 p-6 ring-1 ring-ember/15">
               <StubForm submitLabel="Subscribe" successMessage="You're on the list.">
                 <input
                   id="newsletter-email"
                   type="email"
                   required
                   placeholder="you@example.com"
-                  className="w-full rounded-md border border-line bg-stone-2 px-4 py-3 text-sm text-ink placeholder:text-muted outline-none focus-visible:border-ember"
+                  className="w-full rounded-md border border-line-soft bg-white px-4 py-3 text-sm placeholder:text-muted-on-paper outline-none focus-visible:border-ember"
                 />
               </StubForm>
+              <p className="mt-3 text-xs text-muted-on-paper">No spam. Unsubscribe anytime.</p>
             </div>
           </Reveal>
         </div>

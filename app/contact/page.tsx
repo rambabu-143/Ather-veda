@@ -23,15 +23,15 @@ export default function ContactPage() {
         <div className="grid gap-12 md:grid-cols-2">
           <Reveal className="flex flex-col gap-6">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ember">Address</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] gold-text">Address</span>
               <p className="mt-2 text-sm leading-relaxed text-muted-on-paper">[ Registered office / shelter address ]</p>
             </div>
             <div>
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ember">Phone</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] gold-text">Phone</span>
               <p className="mt-2 text-sm text-muted-on-paper">[ Phone number ]</p>
             </div>
             <div>
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ember">Email</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] gold-text">Email</span>
               <p className="mt-2 text-sm text-muted-on-paper">[ Email address ]</p>
             </div>
             <div className="aspect-video rounded-lg border border-line-soft bg-[repeating-linear-gradient(135deg,var(--color-line-soft)_0_1px,transparent_1px_10px)]" />

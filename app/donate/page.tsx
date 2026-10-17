@@ -41,9 +41,9 @@ export default async function DonatePage(props: PageProps<"/donate">) {
         breadcrumb={[{ href: "/", label: "Home" }, { href: "/donate", label: "Donate" }]}
       >
         <div className="flex flex-wrap justify-center gap-2 text-xs">
-          <span className="rounded-full border border-brass/50 px-3 py-1 text-brass">80G registered</span>
-          <span className="rounded-full border border-brass/50 px-3 py-1 text-brass">Reg. No. [ ]</span>
-          <span className="rounded-full border border-brass/50 px-3 py-1 text-brass">Est. [ ]</span>
+          <span className="rounded-full border border-brass/50 px-3 py-1 gold-text">80G registered</span>
+          <span className="rounded-full border border-brass/50 px-3 py-1 gold-text">Reg. No. [ ]</span>
+          <span className="rounded-full border border-brass/50 px-3 py-1 gold-text">Est. [ ]</span>
         </div>
       </PageHero>
 
@@ -88,7 +88,7 @@ export default async function DonatePage(props: PageProps<"/donate">) {
         </div>
       </section>
 
-      <section className="border-t border-line-soft bg-paper-2">
+      <section className="mx-5 my-6 max-w-6xl rounded-3xl shadow-lg shadow-ember/10 ring-1 ring-ember/15 lg:mx-auto bg-paper-2">
         <div className="mx-auto max-w-2xl px-5 py-20">
           <Reveal className="mb-8">
             <h2 className="text-center font-display text-2xl font-bold text-ink-on-paper">

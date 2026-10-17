@@ -17,25 +17,29 @@ const LINKS = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 12);
+      // hide on scroll down, show on scroll up; always visible near the top
+      if (Math.abs(y - last) > 6) setHidden(y > last && y > 80);
+      last = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    setOpen(false);
-  }, []);
-
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-line-soft bg-paper/90 backdrop-blur-sm transition-shadow duration-300 ${
-        scrolled ? "shadow-sm shadow-black/5" : ""
-      }`}
+      className={`fixed inset-x-3 top-4 z-50 mx-auto max-w-5xl ${open ? "rounded-[2rem]" : "rounded-full"} border border-white/70 bg-white/75 backdrop-blur-md ring-1 ring-ember/15 transition-all duration-300 ${
+        scrolled ? "shadow-lg shadow-ember/10" : "shadow-md shadow-black/5"
+      } ${hidden && !open ? "-translate-y-[150%]" : ""}`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+      <div className="mx-auto flex items-center justify-between px-7 py-3">
         <Link href="/" className="flex items-center gap-2.5 text-ink-on-paper">
           <Mark className="h-7 w-10" />
           <span className="font-signature text-2xl font-bold leading-none">AetherVeda</span>
@@ -80,7 +84,7 @@ export function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden bg-paper border-t border-line-soft md:hidden"
+            className="overflow-hidden rounded-b-[2rem] border-t border-line-soft md:hidden"
           >
             <div className="flex flex-col gap-1 px-5 py-4 text-ink-on-paper">
               {LINKS.map((l) => (

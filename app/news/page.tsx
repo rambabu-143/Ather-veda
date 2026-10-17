@@ -37,7 +37,7 @@ export default function NewsPage() {
         <RevealGroup className="flex flex-col divide-y divide-line-soft">
           {posts.map((post) => (
             <RevealItem key={post.title} className="py-8 first:pt-0">
-              <span className="text-xs font-semibold uppercase tracking-wide text-ember">{post.date}</span>
+              <span className="text-xs font-semibold uppercase tracking-wide gold-text">{post.date}</span>
               <h2 className="mt-2 font-display text-xl font-bold text-ink-on-paper">{post.title}</h2>
               <p className="mt-2 text-sm text-muted-on-paper">{post.excerpt}</p>
             </RevealItem>

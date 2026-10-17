@@ -33,11 +33,11 @@ const COLUMNS = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-line bg-stone text-muted">
+    <footer className="border-t border-ember/20 bg-white text-[#4a3a12]">
       <div className="mx-auto max-w-6xl px-5 py-16">
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-2.5 text-ink">
+            <div className="flex items-center gap-2.5 text-black">
               <Mark className="h-7 w-10" />
               <span className="font-signature text-2xl font-bold leading-none">AetherVeda</span>
             </div>
@@ -48,11 +48,11 @@ export function Footer() {
           </div>
           {COLUMNS.map((col) => (
             <div key={col.heading} className="flex flex-col gap-3">
-              <span className="text-xs font-semibold tracking-[0.14em] text-brass uppercase">
+              <span className="text-xs font-bold tracking-[0.14em] text-[#8a5a00] uppercase">
                 {col.heading}
               </span>
               {col.links.map((l) => (
-                <Link key={l.href} href={l.href} className="text-sm transition-colors hover:text-ink">
+                <Link key={l.href} href={l.href} className="text-sm transition-colors hover:text-black hover:underline">
                   {l.label}
                 </Link>
               ))}
@@ -60,18 +60,18 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-line pt-6 text-xs sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-4 border-t border-black/20 pt-6 text-xs sm:flex-row sm:items-center sm:justify-between">
           <span>
             © {new Date().getFullYear()} The AetherVeda Foundation. Reg. No. [ ]. 80G [ ]
           </span>
           <div className="flex gap-5">
-            <Link href="/privacy" className="hover:text-ink">
+            <Link href="/privacy" className="hover:text-black hover:underline">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-ink">
+            <Link href="/terms" className="hover:text-black hover:underline">
               Terms
             </Link>
-            <span className="text-muted">EN / हिं</span>
+            <span>EN / हिं</span>
           </div>
         </div>
       </div>

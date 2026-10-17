@@ -8,7 +8,7 @@ export function ProgramCard({ program }: { program: Program }) {
       href={`/our-work/${program.slug}`}
       className="group flex flex-col gap-4 rounded-xl border border-line-soft bg-paper-2/60 p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-ember/50 hover:bg-paper-2 hover:shadow-xl hover:shadow-ember/10"
     >
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-stone text-brass transition-colors duration-300 group-hover:bg-ember group-hover:text-stone">
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-stone text-brass transition-colors duration-300 group-hover:bg-ember group-hover:text-white">
         <ProgramIcon name={program.icon} className="h-5 w-5" />
       </div>
       <div>

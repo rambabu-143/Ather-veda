@@ -39,10 +39,10 @@ export default function ImpactPage() {
         </Reveal>
       </section>
 
-      <section className="border-y border-line-soft bg-paper-2">
+      <section className="mx-5 my-6 max-w-6xl rounded-3xl shadow-lg shadow-ember/10 ring-1 ring-ember/15 lg:mx-auto bg-paper-2">
         <div className="mx-auto max-w-3xl px-5 py-20">
           <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ember">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] gold-text">
               Fund Utilization
             </span>
             <h2 className="mt-2 font-display text-3xl font-bold text-ink-on-paper">
@@ -67,13 +67,13 @@ export default function ImpactPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#"
-                className="rounded-md border border-brass px-4 py-2 text-sm font-semibold text-brass transition-colors hover:bg-brass/10"
+                className="rounded-md border border-brass px-4 py-2 text-sm font-semibold gold-text transition-colors hover:bg-brass/10"
               >
                 Download Annual Report [ PDF ]
               </a>
               <a
                 href="#"
-                className="rounded-md border border-brass px-4 py-2 text-sm font-semibold text-brass transition-colors hover:bg-brass/10"
+                className="rounded-md border border-brass px-4 py-2 text-sm font-semibold gold-text transition-colors hover:bg-brass/10"
               >
                 Download 80G Certificate [ PDF ]
               </a>
@@ -84,7 +84,7 @@ export default function ImpactPage() {
 
       <section className="mx-auto max-w-5xl px-5 py-20">
         <Reveal className="mb-10 text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ember">
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] gold-text">
             Stories
           </span>
           <h2 className="mt-2 font-display text-3xl font-bold text-ink-on-paper">
@@ -96,7 +96,7 @@ export default function ImpactPage() {
             <RevealItem key={p.slug}>
               <div className="flex flex-col gap-3 rounded-xl border border-line-soft p-5">
                 <div className="aspect-video rounded-md bg-[repeating-linear-gradient(135deg,var(--color-line-soft)_0_1px,transparent_1px_10px)] border border-line-soft" />
-                <span className="text-xs font-semibold uppercase tracking-wide text-ember">
+                <span className="text-xs font-semibold uppercase tracking-wide gold-text">
                   {p.title}
                 </span>
                 <p className="text-sm text-muted-on-paper">

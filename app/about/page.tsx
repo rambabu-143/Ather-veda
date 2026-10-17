@@ -19,7 +19,7 @@ export default function AboutPage() {
 
       <section className="mx-auto max-w-3xl px-5 py-20">
         <Reveal>
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ember">
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] gold-text">
             Our Story
           </span>
           <h2 className="mt-2 font-display text-3xl font-bold text-ink-on-paper">
@@ -42,10 +42,10 @@ export default function AboutPage() {
         </Reveal>
       </section>
 
-      <section className="border-y border-line-soft bg-paper-2">
+      <section className="mx-5 my-6 max-w-6xl rounded-3xl shadow-lg shadow-ember/10 ring-1 ring-ember/15 lg:mx-auto bg-paper-2">
         <div className="mx-auto max-w-3xl px-5 py-20">
           <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ember">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] gold-text">
               Legal &amp; Registration
             </span>
             <h2 className="mt-2 font-display text-3xl font-bold text-ink-on-paper">
@@ -79,7 +79,7 @@ export default function AboutPage() {
 
       <section className="mx-auto max-w-3xl px-5 py-20">
         <Reveal>
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ember">
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] gold-text">
             Leadership &amp; Trustees
           </span>
           <h2 className="mt-2 font-display text-3xl font-bold text-ink-on-paper">

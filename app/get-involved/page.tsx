@@ -26,11 +26,11 @@ export default function GetInvolvedPage() {
 
       <section id="volunteer" className="mx-auto max-w-3xl scroll-mt-24 px-5 py-20">
         <Reveal>
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ember">
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] gold-text">
             Volunteer
           </span>
           <h2 className="mt-2 font-display text-3xl font-bold text-ink-on-paper">
-            Show up where it's needed
+            Show up where it&apos;s needed
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-on-paper">
             Shelter care shifts, medical camp support, and restoration-site labour are ongoing needs.
@@ -63,10 +63,10 @@ export default function GetInvolvedPage() {
         </Reveal>
       </section>
 
-      <section id="partner" className="scroll-mt-24 border-t border-line-soft bg-paper-2">
+      <section id="partner" className="scroll-mt-24 mx-5 my-6 max-w-6xl rounded-3xl shadow-lg shadow-ember/10 ring-1 ring-ember/15 lg:mx-auto bg-paper-2">
         <div className="mx-auto max-w-3xl px-5 py-20">
           <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ember">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] gold-text">
               Partner / CSR
             </span>
             <h2 className="mt-2 font-display text-3xl font-bold text-ink-on-paper">

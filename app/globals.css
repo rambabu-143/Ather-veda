@@ -2,25 +2,25 @@
 
 :root {
   /* dark surfaces (header on scroll, footer, hero bands) */
-  --color-stone: #09090b;
-  --color-stone-2: #18181b;
+  --color-stone: #ffffff;
+  --color-stone-2: #ffffff;
   --color-ink: #fafafa;
   --color-muted: #a1a1aa;
 
   /* light surfaces (page body, cards) */
   --color-paper: #ffffff;
-  --color-paper-2: #f4f4f5;
+  --color-paper-2: #ffffff;
   --color-ink-on-paper: #18181b;
   --color-muted-on-paper: #52525b;
 
   /* brand accent - warm saffron/amber, single strong accent */
-  --color-ember: #a05708;
-  --color-ember-soft: #834707;
-  --color-brass: #c2690a;
-  --color-tulsi: #4d7c0f;
+  --color-ember: #9a7209;
+  --color-ember-soft: #7a5a07;
+  --color-brass: #b8860b;
+  --color-tulsi: #8a6508;
 
   --color-line: #27272a;
-  --color-line-soft: #e4e4e7;
+  --color-line-soft: #eadfbf;
 }
 
 @theme inline {
@@ -70,3 +70,11 @@ h1, h2, h3, h4 {
     scroll-behavior: auto !important;
   }
 }
+
+/* real gold: metallic gradient that slowly shimmers */
+:root { --gold-grad: linear-gradient(110deg, #9a6b00 0%, #d4a017 18%, #f7e08a 32%, #fffbe0 42%, #e6b422 55%, #b8860b 72%, #f2cf63 88%, #9a6b00 100%); }
+.bg-ember { background-image: var(--gold-grad); background-size: 250% 100%; animation: gold-shimmer 7s linear infinite; color: #2a1d00; }
+.gold-text { background-image: var(--gold-grad); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: gold-shimmer 7s linear infinite; filter: drop-shadow(0 1px 0 rgba(120, 80, 0, 0.35)); }
+.gold-sheen { background: linear-gradient(115deg, transparent 35%, rgba(255, 236, 160, 0.55) 50%, transparent 65%); background-size: 250% 100%; animation: gold-shimmer 9s ease-in-out infinite; }
+@keyframes gold-shimmer { from { background-position: 100% 0; } to { background-position: -150% 0; } }
+@keyframes drift { 50% { transform: translate(40px, -30px) scale(1.12); } }

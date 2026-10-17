@@ -17,29 +17,29 @@ const item = {
 
 export function HomeHero() {
   return (
-    <section className="relative flex min-h-[92dvh] flex-col justify-center overflow-hidden bg-paper text-ink-on-paper">
+    <section className="relative flex min-h-dvh flex-col justify-center overflow-hidden bg-white text-ink-on-paper">
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative mx-auto flex max-w-3xl flex-col items-center gap-6 px-5 py-16 text-center"
+        className="relative z-10 mx-auto flex w-full max-w-3xl flex-col items-center gap-6 px-5 py-24 text-center"
       >
         <motion.div variants={item}>
           <Mark className="h-20 w-28" />
         </motion.div>
 
-        <motion.h1 variants={item} className="text-4xl font-bold tracking-tight sm:text-6xl">
-          The <span className="font-signature text-[1.2em] text-ember">AetherVeda</span> Foundation
+        <motion.h1 variants={item} className="text-4xl font-extrabold tracking-tight text-[#1c1405] [text-shadow:0_2px_24px_rgba(255,255,255,0.9)] sm:text-6xl">
+          The <span className="gold-text font-signature text-[1.2em]">AetherVeda</span> Foundation
         </motion.h1>
 
         <motion.span
           variants={item}
-          className="text-xs font-semibold uppercase tracking-[0.22em] text-brass sm:text-sm"
+          className="text-xs font-semibold uppercase tracking-[0.22em] text-ember sm:text-sm"
         >
           Nourishing Lives. Preserving Legacies.
         </motion.span>
 
-        <motion.p variants={item} className="max-w-xl text-base text-muted-on-paper sm:text-lg">
+        <motion.p variants={item} className="max-w-xl text-base font-medium text-[#2e2410] [text-shadow:0_1px_12px_rgba(255,255,255,0.9)] sm:text-lg">
           Gaushalas and dog shelters, free food and medical aid, temple restoration, and biogas from
           every shelter we run. One foundation, four promises kept.
         </motion.p>
@@ -51,7 +51,7 @@ export function HomeHero() {
           </Button>
         </motion.div>
 
-        <motion.p variants={item} className="mt-6 max-w-md text-sm italic text-muted-on-paper">
+        <motion.p variants={item} className="mt-6 max-w-md text-sm font-medium italic text-[#3a2f18]">
           {dedication.line}
         </motion.p>
       </motion.div>
